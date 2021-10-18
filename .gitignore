@@ -28,3 +28,6 @@
 
 # Ignore vendor dir
 vendor
+
+# Ignore vim tmp file
+*.swp
