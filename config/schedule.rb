@@ -12,9 +12,11 @@
 #   runner "MyModel.some_method"
 #   rake "some:great:rake:task"
 # end
-#
-# every 4.days do
-#   runner "AnotherModel.prune_old_records"
-# end
-
 # Learn more: http://github.com/javan/whenever
+
+
+# cron job to scrape saturday lotto data from website.
+# The job gets executed at Sydney time 11:05pm every saturday night
+every :saturday, at: '12:05pm', roles: [:app] do
+  rake "lotto:scrape_saturday_lotto"
+end
