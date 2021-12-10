@@ -41,6 +41,9 @@ gem 'rspec-rails'
 # cron jobs gem
 gem 'whenever', require: false
 
+# parse yml file and load its values to ENV
+gem "figaro"
+
 group :development, :test do
   gem 'pry-rails'
 end
